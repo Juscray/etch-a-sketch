@@ -37,7 +37,7 @@ const divs = document.querySelectorAll("#container div");
 
 divs.forEach((hover) => {
     hover.addEventListener("mouseenter", () => {
-        hover.style.background = "teal"
+        hover.style.background = `hsl(${Math.random() * 350}, 80%, 50%)`
     })
 
 })
@@ -78,7 +78,7 @@ gridButton.addEventListener("click", () => {
     const newGrid = document.querySelectorAll("#container div");
     newGrid.forEach((hovering) => {
         hovering.addEventListener("mouseenter", () => {
-        hovering.style.background = "teal"
+        hovering.style.background = `hsl(${Math.random() * 360}, 80%, 40%)`
         })
 
     })
