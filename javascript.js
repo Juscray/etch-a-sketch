@@ -10,23 +10,25 @@ gridButton.textContent = "Edit Grid";
 
 
 container.style.height = "700px";
-container.style.width = "1950px";
+container.style.width = "700px";
+container.style.alignContent = "center";
 body.style.display = "flex";
 body.style.flexDirection = "column";
 body.style.alignItems = "center";
 container.style.display = "flex";
-container.style.flexWrap = "wrap";
-container.style.textAlign = "center";
+container.style.flexDirection = "column";
 container.style.justifyContent = "center";
+container.style.flexWrap = "wrap";
 
-const numberofSquares = 5000
+const numberofSquares = 256;
 
 for (i = 0; i < numberofSquares; i++){
     const square = document.createElement("div");
 
-    square.style.width = "16px";
-    square.style.height = "16px";
+    square.style.width = "43.75px";
+    square.style.height = "43.75px";
     square.style.border = "1px dashed rgba(0, 0, 0, 0.1)";
+    square.style.boxSizing = "border-box";
 
     container.appendChild(square);
 }
@@ -54,7 +56,7 @@ gridButton.addEventListener("click", () => {
     
     container.style.flexDirection = "column";
     const containerSize = 700; //in px
-    const squareSize = containerSize / userPrompt + "px";
+    const squareSize = (containerSize / userPrompt) + "px";
     const totalSquares = userPrompt * userPrompt;
 
     if (userPrompt < 101) {
